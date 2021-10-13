@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for='phoneNo'>PhoneNumber</label>
+    <input type="text" id='phoneNo'>
+    <button id='submitNumber' >Submit</button>
+    <label for='OTP'>OTP</label>
+    <input type="text" id='OTP'>
+    <button id='submitOTP'>Submit OTP</button>
+    <p style="display: none;" id='message'>message sent</p>
+
+</body>
+<script>
+    const submitNumber = document.getElementById('submitNumber');
+    const phoneNo = document.getElementById('phoneNo');
+    const submitOTP = document.getElementById('submitOTP');
+    const OTP = document.getElementById('OTP');
+    const msgSend =  document.getElementById('message');
+    submitNumber.addEventListener('click',
+    async ()=>{
+        const number = await fetch('/login',{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify({
+                phone: phoneNo.value,
+                channel: 'sms'
+            })
+        })
+        msgSend.innerHTML = number;
+        console.log(number)
+        msgSend.style.display= 'block';
+        
+    })
+    submitOTP.addEventListener('click',
+            async () => {
+                const number = await fetch('/verify', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        phone: phoneNo.value,
+                        code: OTP.value
+                    })
+                })
+                msgSend.innerHTML = number;
+                console.log(number)
+                msgSend.style.display = 'block';
+    })
+</script>
+</html>

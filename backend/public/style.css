@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  color: lime;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#title {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#addTask {
+  padding: 10px;
+  border: 1px solid lime;
+  height: 75vh;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+#addTask h3 {
+  text-decoration: underline;
+}
+
+li {
+  padding: 5px;
+}
+
+a,
+a:visited {
+  color: lime;
+}
+a:hover {
+  color: greenyellow;
+}
+
+#addTask input {
+  margin: 10px 5px 5px 5px;
+  border: 1px solid lime;
+  background-color: black;
+  color: lime;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+form button {
+  line-height: 1.3em;
+  width: 50px;
+  border: 1px solid black;
+  color: black;
+  background-color: lime;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+form button:hover {
+  background-color: rgba(0, 255, 0, 0.521);
+}

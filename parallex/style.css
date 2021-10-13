@@ -1,0 +1,85 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  overflow: auto;
+}
+
+#scrolled {
+  background-color: rgba(255, 255, 255, 0.178);
+  background-image: url(canyon.jpg);
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+#scroller {
+  font-weight: 300;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(3, 3, 3, 0.308);
+  transform: translate(-50px, -40px);
+  width: 100px;
+  padding: 10px;
+  height: 40px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.904);
+}
+div {
+  height: 100%;
+}
+div h3 {
+  margin: 10px auto;
+}
+
+#container div {
+  scroll-snap-align: start;
+}
+
+#container {
+  margin: 0;
+  position: absolute;
+  scroll-snap-type: y mandatory;
+}
+
+#cycle {
+  position: relative;
+  padding: 10px;
+  background-image: url(cycle.jpg);
+  background-size: cover;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.205);
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  font-weight: 400;
+}
+#cycle:hover {
+  background-color: rgba(0, 0, 0, 0.842);
+}
+
+#canyon {
+  position: relative;
+  background-image: url(valcano.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.418);
+}
+
+#scroller:hover {
+  background-color: rgba(3, 3, 3, 0.555);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.993);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
